@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Biochem\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Premium fruit products crafted with nature in mind."
+msgstr "Премиальные фруктовые продукты, созданные с заботой о природе."
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "Main navigation"
+msgstr "Главная навигация"
+
+msgid "Products"
+msgstr "Продукция"
+
+msgid "Our Story"
+msgstr "Наша история"
+
+msgid "Sustainability"
+msgstr "Устойчивое развитие"
+
+msgid "Contact"
+msgstr "Контакты"
+
+msgid "Legal links"
+msgstr "Правовые ссылки"
+
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+msgid "Terms of Use"
+msgstr "Условия использования"
+
+msgid "Follow Us"
+msgstr "Подписывайтесь"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Premium Fruit Products"
+msgstr "Премиальные фруктовые продукты"
+
+msgid "PURE NATURE IN EVERY DROP"
+msgstr "ЧИСТАЯ ПРИРОДА В КАЖДОЙ КАПЛЕ"
+
+msgid "Premium fruit products crafted with care."
+msgstr "Премиальная фруктовая продукция, созданная с заботой."
+
+msgid "Explore Products"
+msgstr "Смотреть продукцию"
+
+msgid "Our Collections"
+msgstr "Наши коллекции"
+
+msgid "Learn More"
+msgstr "Узнать больше"
+
+msgid "Featured Products"
+msgstr "Избранные продукты"
+
+msgid "View Details"
+msgstr "Подробнее"
+
+msgid "All Products"
+msgstr "Вся продукция"
+
+msgid "No products found."
+msgstr "Продукты не найдены."
+
+msgid "Previous"
+msgstr "Назад"
+
+msgid "Next"
+msgstr "Вперед"
+
+msgid "Page %(num)s of %(total)s"
+msgstr "Страница %(num)s из %(total)s"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Weight:"
+msgstr "Вес:"
+
+msgid "g"
+msgstr "г"
+
+msgid "Ingredients"
+msgstr "Ингредиенты"
+
+msgid "Nutrition Facts"
+msgstr "Пищевая ценность"
+
+msgid "Other Tastes"
+msgstr "Другие вкусы"
+
+msgid "Heritage"
+msgstr "Наследие"
+
+msgid "Values"
+msgstr "Ценности"
+
+msgid "Quality First"
+msgstr "Качество превыше всего"
+
+msgid "Only the finest fruits make it into our products."
+msgstr "Только лучшие фрукты попадают в нашу продукцию."
+
+msgid "We protect the ecosystems that nourish our ingredients."
+msgstr "Мы защищаем экосистемы, питающие наши ингредиенты."
+
+msgid "Community"
+msgstr "Сообщество"
+
+msgid "Supporting local farmers and families for generations."
+msgstr "Поддержка местных фермеров и семей на протяжении поколений."
+
+msgid "Our Commitment"
+msgstr "Наше обязательство"
+
+msgid "Responsible Sourcing"
+msgstr "Ответственное снабжение"
+
+msgid "Reducing Our Footprint"
+msgstr "Сокращение нашего следа"
+
+msgid "Contact Us"
+msgstr "Свяжитесь с нами"
+
+msgid "Thank you for your message. We will be in touch soon."
+msgstr "Спасибо за ваше сообщение. Мы скоро свяжемся с вами."
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Your name"
+msgstr "Ваше имя"
+
+msgid "Email"
+msgstr "Электронная почта"
+
+msgid "your@email.com"
+msgstr "ваш@email.com"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "+1 234 567 890"
+msgstr "+7 234 567 890"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "How can we help?"
+msgstr "Чем мы можем помочь?"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Your message..."
+msgstr "Ваше сообщение..."
+
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+msgid "Get in Touch"
+msgstr "Свяжитесь с нами"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Working Hours"
+msgstr "Часы работы"
+
+msgid "Mon – Fri, 9:00 – 18:00"
+msgstr "Пн – Пт, 9:00 – 18:00"
+
+msgid "Breadcrumb"
+msgstr "Хлебные крошки"
+
+msgid "Category filter"
+msgstr "Фильтр по категории"
+
+msgid "Pagination"
+msgstr "Навигация по страницам"

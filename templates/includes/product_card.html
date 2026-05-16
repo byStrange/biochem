@@ -1,0 +1,15 @@
+{% load i18n %}{% load translation_tags %}
+<a href="{% url 'product_detail' lang=current_language slug=product.slug %}" class="product-card">
+  <div class="product-card__img">
+    {% if product.image %}
+      <img src="{{ product.image.url }}" alt="{% trans_field product 'name' %}">
+    {% else %}
+      <div class="placeholder"></div>
+    {% endif %}
+  </div>
+  <div class="product-card__info">
+    <h3>{% trans_field product "name" %}</h3>
+    <p>{% trans_field product "tagline" %}</p>
+    <span class="btn btn--text">{% trans 'View Details' %}</span>
+  </div>
+</a>

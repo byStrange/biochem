@@ -1,0 +1,102 @@
+{% extends 'base.html' %}{% load static %}{% load i18n %}{% load translation_tags %}
+
+{% block meta_title %}{{ brand_name }} — {% trans 'Premium Fruit Products' %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-slider">
+    {% for slide in slides %}
+      <div class="hero-slide{% if forloop.first %} active{% endif %}">
+        {% if slide.image %}
+          <img src="{{ slide.image.url }}" alt="" class="hero-bg">
+        {% else %}
+          <div class="hero-bg placeholder"></div>
+        {% endif %}
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <h1 class="hero-headline">{% trans_field slide "headline" %}</h1>
+          <p class="hero-subheadline">{% trans_field slide "subheadline" %}</p>
+          <a href="{{ slide.cta_url }}" class="btn btn--primary">{% trans_field slide "cta_text" %}</a>
+        </div>
+      </div>
+    {% empty %}
+      <div class="hero-slide active">
+        <div class="hero-bg placeholder"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <h1 class="hero-headline">{% trans 'PURE NATURE IN EVERY DROP' %}</h1>
+          <p class="hero-subheadline">{% trans 'Premium fruit products crafted with care.' %}</p>
+          <a href="{% url 'product_list' lang=current_language %}" class="btn btn--primary">{% trans 'Explore Products' %}</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section section--categories">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">{% trans 'Our Collections' %}</h2>
+    </header>
+    <div class="category-grid">
+      {% for cat in categories %}
+        <a href="{% url 'product_list_category' lang=current_language slug=cat.slug %}" class="category-card">
+          {% if cat.image %}
+            <img src="{{ cat.image.url }}" alt="{% trans_field cat 'name' %}">
+          {% else %}
+            <div class="category-card__img placeholder"></div>
+          {% endif %}
+          <span class="category-card__name">{% trans_field cat "name" %}</span>
+        </a>
+      {% empty %}
+        <div class="category-card">
+          <div class="category-card__img placeholder"></div>
+          <span class="category-card__name">{% trans 'Fruit Juices' %}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Story Teaser -->
+<section class="section section--story">
+  <div class="container split-layout">
+    <div class="split-layout__media">
+      {% if story_teaser and story_teaser.image %}
+        <img src="{{ story_teaser.image.url }}" alt="">
+      {% else %}
+        <div class="placeholder placeholder--wide"></div>
+      {% endif %}
+    </div>
+    <div class="split-layout__content">
+      <h2 class="section-title">{% if story_teaser %}{% trans_field story_teaser "title" %}{% else %}{% trans 'Our Story' %}{% endif %}</h2>
+      <p>{% if story_teaser %}{% trans_field story_teaser "body" %}{% else %}{% trans 'For over three decades, we have been cultivating the finest fruits and transforming them into premium products that bring nature to your table.' %}{% endif %}</p>
+      <a href="{% url 'story' lang=current_language %}" class="btn btn--outline">{% trans 'Learn More' %}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section section--products">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">{% trans 'Featured Products' %}</h2>
+    </header>
+    <div class="product-grid">
+      {% for product in featured_products %}
+        {% include 'includes/product_card.html' with product=product %}
+      {% empty %}
+        <div class="product-card">
+          <div class="product-card__img placeholder"></div>
+          <h3>{% trans 'Apple Juice' %}</h3>
+          <p>{% trans 'Made with 100% real fruit' %}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

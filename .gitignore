@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+.venv
+staticfiles/
+media/
+db.sqlite3
+*.log
+*.pot
+*.mo
+local_settings.py

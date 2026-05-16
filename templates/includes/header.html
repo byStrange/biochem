@@ -1,0 +1,18 @@
+{% load i18n %}
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="{% url 'home' lang=current_language %}" class="logo">{{ brand_name }}</a>
+    <button class="menu-toggle" aria-label="{% trans 'Menu' %}" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="main-nav" aria-label="{% trans 'Main navigation' %}">
+      <ul class="nav-list">
+        <li><a href="{% url 'product_list' lang=current_language %}">{% trans 'Products' %}</a></li>
+        <li><a href="{% url 'story' lang=current_language %}">{% trans 'Our Story' %}</a></li>
+        <li><a href="{% url 'sustainability' lang=current_language %}">{% trans 'Sustainability' %}</a></li>
+        <li><a href="{% url 'contact' lang=current_language %}">{% trans 'Contact' %}</a></li>
+      </ul>
+      {% include 'includes/language_switcher.html' %}
+    </nav>
+  </div>
+</header>

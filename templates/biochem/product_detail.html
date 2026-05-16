@@ -1,0 +1,76 @@
+{% extends 'base.html' %}{% load static %}{% load i18n %}{% load translation_tags %}
+
+{% block meta_title %}{% trans_field product "name" %} — {{ brand_name }}{% endblock %}
+{% block meta_description %}{% trans_field product "meta_description" %}{% endblock %}
+
+{% block content %}
+
+<section class="section section--page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="{% trans 'Breadcrumb' %}">
+      <a href="{% url 'home' lang=current_language %}">{% trans 'Home' %}</a>
+      <span class="breadcrumb__sep">/</span>
+      <a href="{% url 'product_list' lang=current_language %}">{% trans 'Products' %}</a>
+      <span class="breadcrumb__sep">/</span>
+      <span>{% trans_field product "name" %}</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section section--product">
+  <div class="container split-layout split-layout--product">
+    <div class="split-layout__media">
+      {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{% trans_field product 'name' %}" class="product-image">
+      {% else %}
+        <div class="placeholder placeholder--tall"></div>
+      {% endif %}
+    </div>
+    <div class="split-layout__content">
+      <p class="product-category">{% trans_field product.category "name" %}</p>
+      <h1 class="product-title">{% trans_field product "name" %}</h1>
+      <p class="product-tagline">{% trans_field product "tagline" %}</p>
+      <div class="product-description">
+        <p>{% trans_field product "description" %}</p>
+      </div>
+      {% if product.weight_grams %}
+        <p class="product-spec"><strong>{% trans 'Weight:' %}&lt;/strong&gt; {{ product.weight_grams }} {% trans 'g' %}</p>
+      {% endif %}
+      <div class="accordion">
+        <button class="accordion__header" aria-expanded="false">
+          {% trans 'Ingredients' %}
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__body">
+          <p>{% trans_field product "ingredients" %}</p>
+        </div>
+        <button class="accordion__header" aria-expanded="false">
+          {% trans 'Nutrition Facts' %}
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__body">
+          <p>{% trans_field product "nutrition_facts" %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if related_products %}
+  <section class="section section--related">
+    <div class="container">
+      <h2 class="section-title">{% trans 'Other Tastes' %}</h2>
+      <div class="carousel">
+        <button class="carousel__prev" aria-label="{% trans 'Previous' %}">&#8249;</button>
+        <div class="carousel__track">
+          {% for p in related_products %}
+            <div class="carousel__item">{% include 'includes/product_card.html' with product=p %}</div>
+          {% endfor %}
+        </div>
+        <button class="carousel__next" aria-label="{% trans 'Next' %}">&#8250;</button>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}{% load static %}{% load i18n %}{% load translation_tags %}
+
+{% block meta_title %}{% if page %}{% trans_field page "title" %} — {% endif %}{{ brand_name }}{% endblock %}
+
+{% block content %}
+
+<section class="section section--page-hero">
+  <div class="container">
+    <h1 class="page-title">{% if page %}{% trans_field page "title" %}{% else %}{% trans 'Sustainability' %}{% endif %}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container story-content">
+    {% if page %}
+      <div class="rich-text">{{ page.body|safe }}</div>
+    {% else %}
+      <div class="rich-text">
+        <h2>{% trans 'Our Commitment' %}</h2>
+        <p>{% trans 'We believe that producing exceptional fruit products goes hand in hand with protecting the environment that makes them possible.' %}</p>
+        <h2>{% trans 'Responsible Sourcing' %}</h2>
+        <p>{% trans 'We work directly with local farmers who share our commitment to sustainable agriculture. Every ingredient is traceable to its source.' %}</p>
+        <h2>{% trans 'Reducing Our Footprint' %}</h2>
+        <p>{% trans 'From energy-efficient facilities to recyclable packaging, we continuously invest in reducing our environmental impact.' %}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

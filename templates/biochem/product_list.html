@@ -1,0 +1,54 @@
+{% extends 'base.html' %}{% load static %}{% load i18n %}{% load translation_tags %}
+
+{% block meta_title %}{% if current_category %}{% trans_field current_category "name" %} — {% endif %}{% trans 'Products' %} — {{ brand_name }}{% endblock %}
+
+{% block content %}
+
+<section class="section section--page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="{% trans 'Breadcrumb' %}">
+      <a href="{% url 'home' lang=current_language %}">{% trans 'Home' %}</a>
+      <span class="breadcrumb__sep">/</span>
+      {% if current_category %}
+        <a href="{% url 'product_list' lang=current_language %}">{% trans 'Products' %}</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>{% trans_field current_category "name" %}</span>
+      {% else %}
+        <span>{% trans 'Products' %}</span>
+      {% endif %}
+    </nav>
+    <h1 class="page-title">{% if current_category %}{% trans_field current_category "name" %}{% else %}{% trans 'All Products' %}{% endif %}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <nav class="filter-tabs" aria-label="{% trans 'Category filter' %}">
+      <a href="{% url 'product_list' lang=current_language %}" class="filter-tab{% if not current_category %} active{% endif %}">{% trans 'All Products' %}</a>
+      {% for cat in categories %}
+        <a href="{% url 'product_list_category' lang=current_language slug=cat.slug %}" class="filter-tab{% if current_category and current_category.slug == cat.slug %} active{% endif %}">{% trans_field cat "name" %}</a>
+      {% endfor %}
+    </nav>
+    <div class="product-grid product-grid--list">
+      {% for product in products %}
+        {% include 'includes/product_card.html' with product=product %}
+      {% empty %}
+        <p class="empty-state">{% trans 'No products found.' %}</p>
+      {% endfor %}
+    </div>
+
+    {% if is_paginated %}
+      <nav class="pagination" aria-label="{% trans 'Pagination' %}">
+        {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}" class="btn btn--outline">{% trans 'Previous' %}</a>
+        {% endif %}
+        <span class="pagination__info">{% blocktrans with num=page_obj.number total=page_obj.paginator.num_pages %}Page {{ num }} of {{ total }}{% endblocktrans %}</span>
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}" class="btn btn--outline">{% trans 'Next' %}</a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

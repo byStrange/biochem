@@ -1,0 +1,59 @@
+{% extends 'base.html' %}{% load static %}{% load i18n %}{% load translation_tags %}
+
+{% block meta_title %}{% trans 'Contact' %} — {{ brand_name }}{% endblock %}
+
+{% block content %}
+
+<section class="section section--page-header">
+  <div class="container">
+    <h1 class="page-title">{% trans 'Contact Us' %}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-layout split-layout--contact">
+    <div class="split-layout__content">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert--success">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+      <form method="post" class="contact-form" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="form-group{% if field.errors %} form-group--error{% endif %}">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+              <span class="error-text">{{ field.errors|striptags }}</span>
+            {% endif %}
+          </div>
+        {% endfor %}
+        <button type="submit" class="btn btn--primary">{% trans 'Send Message' %}</button>
+      </form>
+    </div>
+    <div class="split-layout__aside">
+      <h2>{% trans 'Get in Touch' %}</h2>
+      <ul class="contact-info">
+        <li>
+          <strong>{% trans 'Address' %}</strong>
+          <span>123 Orchard Lane, Fruit Valley, CA 90210</span>
+        </li>
+        <li>
+          <strong>{% trans 'Phone' %}</strong>
+          <span>+1 (555) 123-4567</span>
+        </li>
+        <li>
+          <strong>{% trans 'Email' %}</strong>
+          <span>hello@biochem.example</span>
+        </li>
+        <li>
+          <strong>{% trans 'Working Hours' %}</strong>
+          <span>Mon – Fri, 9:00 – 18:00</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

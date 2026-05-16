@@ -1,0 +1,16 @@
+{% load static %}{% load i18n %}{% load translation_tags %}
+<!DOCTYPE html>
+<html lang="{{ current_language }}">
+<head>
+  {% include 'includes/head_meta.html' %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+  {% include 'includes/header.html' %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% include 'includes/footer.html' %}
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

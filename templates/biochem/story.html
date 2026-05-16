@@ -1,0 +1,36 @@
+{% extends 'base.html' %}{% load static %}{% load i18n %}{% load translation_tags %}
+
+{% block meta_title %}{% if page %}{% trans_field page "title" %} — {% endif %}{{ brand_name }}{% endblock %}
+
+{% block content %}
+
+<section class="section section--page-hero">
+  <div class="container">
+    <h1 class="page-title">{% if page %}{% trans_field page "title" %}{% else %}{% trans 'Our Story' %}{% endif %}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container story-content">
+    {% if page %}
+      {% if page.subtitle %}
+        <p class="story-lead">{% trans_field page "subtitle" %}</p>
+      {% endif %}
+      <div class="rich-text">{{ page.body|safe }}</div>
+    {% else %}
+      <p class="story-lead">{% trans 'For over three decades, Biochem has been cultivating the finest fruits and transforming them into premium products.' %}</p>
+      <div class="rich-text">
+        <h2>{% trans 'Heritage' %}</h2>
+        <p>{% trans 'Founded with a simple belief: nature provides the best ingredients. We have built our reputation on quality, transparency, and respect for the land.' %}</p>
+        <h2>{% trans 'Values' %}</h2>
+        <ul>
+          <li><strong>{% trans 'Quality First' %}&lt;/strong&gt; — {% trans 'Only the finest fruits make it into our products.' %}</li>
+          <li><strong>{% trans 'Sustainability' %}&lt;/strong&gt; — {% trans 'We protect the ecosystems that nourish our ingredients.' %}</li>
+          <li><strong>{% trans 'Community' %}&lt;/strong&gt; — {% trans 'Supporting local farmers and families for generations.' %}</li>
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

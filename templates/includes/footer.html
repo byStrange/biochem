@@ -1,0 +1,26 @@
+{% load i18n %}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo">{{ brand_name }}</span>
+      <p>{% trans 'Premium fruit products crafted with nature in mind.' %}</p>
+    </div>
+    <div class="footer-links">
+      <nav aria-label="{% trans 'Legal links' %}">
+        <a href="#">{% trans 'Privacy Policy' %}</a>
+        <a href="#">{% trans 'Terms of Use' %}</a>
+      </nav>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer-lang">
+      {% include 'includes/language_switcher.html' %}
+    </div>
+    <div class="footer-copy">
+      <p>Biochem Corp. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

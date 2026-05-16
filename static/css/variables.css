@@ -1,0 +1,28 @@
+:root {
+  /* Colors */
+  --color-bg: #F5F1E8;
+  --color-bg-alt: #FFFFFF;
+  --color-navy: #1A2B4A;
+  --color-accent: #C9A96E;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B6B6B;
+  --color-border: rgba(26, 43, 74, 0.12);
+  --color-overlay: rgba(26, 43, 74, 0.45);
+
+  /* Typography */
+  --font-heading: 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: 'Georgia', 'Times New Roman', serif;
+
+  /* Spacing */
+  --spacing-unit: 8px;
+  --spacing-section: 100px;
+  --spacing-section-mobile: 64px;
+  --container-max: 1280px;
+  --container-padding: 24px;
+
+  /* Misc */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --radius: 4px;
+}

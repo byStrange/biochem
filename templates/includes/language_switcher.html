@@ -1,0 +1,13 @@
+{% load i18n %}
+<div class="lang-switcher">
+  <span class="lang-current">{{ current_language|upper }}</span>
+  <ul class="lang-list">
+    {% for code, label in available_languages %}
+      {% if code != current_language %}
+        <li>
+          <a href="/{{ code }}{{ request.path|slice:'3:' }}" hreflang="{{ code }}">{{ label }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

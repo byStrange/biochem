@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Biochem\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Premium fruit products crafted with nature in mind."
+msgstr "Tabiatni hisobga olgan holda yaratilgan yuqori sifatli meva mahsulotlari."
+
+msgid "Menu"
+msgstr "Menyu"
+
+msgid "Main navigation"
+msgstr "Asosiy navigatsiya"
+
+msgid "Products"
+msgstr "Mahsulotlar"
+
+msgid "Our Story"
+msgstr "Bizning hikoyamiz"
+
+msgid "Sustainability"
+msgstr "Barqaror rivojlanish"
+
+msgid "Contact"
+msgstr "Aloqa"
+
+msgid "Legal links"
+msgstr "Huquqiy havolalar"
+
+msgid "Privacy Policy"
+msgstr "Maxfiylik siyosati"
+
+msgid "Terms of Use"
+msgstr "Foydalanish shartlari"
+
+msgid "Follow Us"
+msgstr "Bizni kuzating"
+
+msgid "Language"
+msgstr "Til"
+
+msgid "Premium Fruit Products"
+msgstr "Yuqori sifatli meva mahsulotlari"
+
+msgid "PURE NATURE IN EVERY DROP"
+msgstr "HAR TOMCHIDA TOZA TABIIYAT"
+
+msgid "Premium fruit products crafted with care."
+msgstr "G'amxo'rlik bilan yaratilgan yuqori sifatli meva mahsulotlari."
+
+msgid "Explore Products"
+msgstr "Mahsulotlarni ko'rish"
+
+msgid "Our Collections"
+msgstr "Bizning kolleksiyalarimiz"
+
+msgid "Learn More"
+msgstr "Ko'proq o'qish"
+
+msgid "Featured Products"
+msgstr "Tavsiya etilgan mahsulotlar"
+
+msgid "View Details"
+msgstr "Batafsil"
+
+msgid "All Products"
+msgstr "Barcha mahsulotlar"
+
+msgid "No products found."
+msgstr "Mahsulotlar topilmadi."
+
+msgid "Previous"
+msgstr "Oldingi"
+
+msgid "Next"
+msgstr "Keyingi"
+
+msgid "Page %(num)s of %(total)s"
+msgstr "%(total)s dan %(num)s-sahifa"
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "Weight:"
+msgstr "Vazn:"
+
+msgid "g"
+msgstr "g"
+
+msgid "Ingredients"
+msgstr "Tarkib"
+
+msgid "Nutrition Facts"
+msgstr "Oziqlanish ma'lumotlari"
+
+msgid "Other Tastes"
+msgstr "Boshqa ta'mlar"
+
+msgid "Heritage"
+msgstr "Meros"
+
+msgid "Values"
+msgstr "Qadriyatlar"
+
+msgid "Quality First"
+msgstr "Avvalo sifat"
+
+msgid "Only the finest fruits make it into our products."
+msgstr "Faqat eng yaxshi mevalar bizning mahsulotlarimizga tushadi."
+
+msgid "We protect the ecosystems that nourish our ingredients."
+msgstr "Biz ingredientlarimizni boqadigan ekotizimlarni himoya qilamiz."
+
+msgid "Community"
+msgstr "Jamoa"
+
+msgid "Supporting local farmers and families for generations."
+msgstr "Avlodlar davomida mahalliy fermerlar va oilalarni qo'llab-quvvatlash."
+
+msgid "Our Commitment"
+msgstr "Bizning majburiyatimiz"
+
+msgid "Responsible Sourcing"
+msgstr "Mas'uliyatli ta'minot"
+
+msgid "Reducing Our Footprint"
+msgstr "Ortiqcha izni kamaytirish"
+
+msgid "Contact Us"
+msgstr "Biz bilan bog'laning"
+
+msgid "Thank you for your message. We will be in touch soon."
+msgstr "Xabaringiz uchun rahmat. Tez orada siz bilan bog'lanamiz."
+
+msgid "Name"
+msgstr "Ism"
+
+msgid "Your name"
+msgstr "Ismingiz"
+
+msgid "Email"
+msgstr "Elektron pochta"
+
+msgid "your@email.com"
+msgstr "sizning@email.com"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "+1 234 567 890"
+msgstr "+998 234 567 890"
+
+msgid "Subject"
+msgstr "Mavzu"
+
+msgid "How can we help?"
+msgstr "Qanday yordam bera olamiz?"
+
+msgid "Message"
+msgstr "Xabar"
+
+msgid "Your message..."
+msgstr "Sizning xabaringiz..."
+
+msgid "Send Message"
+msgstr "Xabar yuborish"
+
+msgid "Get in Touch"
+msgstr "Biz bilan bog'laning"
+
+msgid "Address"
+msgstr "Manzil"
+
+msgid "Working Hours"
+msgstr "Ish soatlari"
+
+msgid "Mon – Fri, 9:00 – 18:00"
+msgstr "Du – Ju, 9:00 – 18:00"
+
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+msgid "Category filter"
+msgstr "Kategoriya bo'yicha filtrlash"
+
+msgid "Pagination"
+msgstr "Sahifalar"
