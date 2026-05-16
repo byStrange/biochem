@@ -188,3 +188,5 @@ msgstr "Фильтр по категории"
 
 msgid "Pagination"
 msgstr "Навигация по страницам"
+msgid "Slide"
+msgstr "Слайд"

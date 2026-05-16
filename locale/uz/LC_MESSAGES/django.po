@@ -188,3 +188,5 @@ msgstr "Kategoriya bo'yicha filtrlash"
 
 msgid "Pagination"
 msgstr "Sahifalar"
+msgid "Slide"
+msgstr "Slayd"

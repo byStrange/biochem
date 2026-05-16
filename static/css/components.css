@@ -193,14 +193,21 @@
   overflow: hidden;
 }
 
+.hero-slider {
+  position: relative;
+}
+
 .hero-slide {
   position: relative;
   display: none;
   min-height: 80vh;
   align-items: center;
+  opacity: 0;
+  transition: opacity 600ms ease;
 }
 .hero-slide.active {
   display: flex;
+  opacity: 1;
 }
 
 .hero-bg {
@@ -228,6 +235,62 @@
   padding-top: 120px;
   padding-bottom: 120px;
   color: #fff;
+}
+
+/* Hero controls */
+.hero-controls {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-prev,
+.hero-next {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.hero-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-dot.active {
+  background: #fff;
+  transform: scale(1.2);
 }
 
 .hero-headline {

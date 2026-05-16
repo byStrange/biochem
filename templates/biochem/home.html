@@ -5,10 +5,10 @@
 {% block content %}
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" data-slider="true">
   <div class="hero-slider">
     {% for slide in slides %}
-      <div class="hero-slide{% if forloop.first %} active{% endif %}">
+      <div class="hero-slide{% if forloop.first %} active{% endif %}" data-index="{{ forloop.counter0 }}">
         {% if slide.image %}
           <img src="{{ slide.image.url }}" alt="" class="hero-bg">
         {% else %}
@@ -22,7 +22,7 @@
         </div>
       </div>
     {% empty %}
-      <div class="hero-slide active">
+      <div class="hero-slide active" data-index="0">
         <div class="hero-bg placeholder"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content container">
@@ -33,6 +33,17 @@
       </div>
     {% endfor %}
   </div>
+  {% if slides|length > 1 %}
+    <div class="hero-controls">
+      <button class="hero-prev" aria-label="{% trans 'Previous' %}">&#8249;</button>
+      <div class="hero-dots">
+        {% for slide in slides %}
+          <button class="hero-dot{% if forloop.first %} active{% endif %}" data-index="{{ forloop.counter0 }}" aria-label="{% trans 'Slide' %} {{ forloop.counter }}"></button>
+        {% endfor %}
+      </div>
+      <button class="hero-next" aria-label="{% trans 'Next' %}">&#8250;</button>
+    </div>
+  {% endif %}
 </section>
 
 <!-- Categories -->
