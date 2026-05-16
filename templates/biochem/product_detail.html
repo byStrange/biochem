@@ -34,7 +34,7 @@
         <p>{% trans_field product "description" %}</p>
       </div>
       {% if product.weight_grams %}
-        <p class="product-spec"><strong>{% trans 'Weight:' %}&lt;/strong&gt; {{ product.weight_grams }} {% trans 'g' %}</p>
+        <p class="product-spec"><strong>{% trans 'Weight:' %}</strong> {{ product.weight_grams }} {% trans 'g' %}</p>
       {% endif %}
       <div class="accordion">
         <button class="accordion__header" aria-expanded="false">
