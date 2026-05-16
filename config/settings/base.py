@@ -1,19 +1,15 @@
 from pathlib import Path
 import os
-import environ
-
-env = environ.Env(
-    DEBUG=(bool, False),
-)
+from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
-SECRET_KEY = env('SECRET_KEY', default='unsafe-default-change-me')
-DEBUG = env('DEBUG')
+SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-default-change-me')
+DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 'yes')
 ALLOWED_HOSTS = [
     host.strip()
-    for host in env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
+    for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
     if host.strip()
 ]
 
@@ -66,7 +62,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 ASGI_APPLICATION = 'config.asgi.application'
 
 DATABASES = {
-    'default': env.db(default='sqlite:///db.sqlite3')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
