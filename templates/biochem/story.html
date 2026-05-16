@@ -16,7 +16,8 @@
       {% if page.subtitle %}
         <p class="story-lead">{% trans_field page "subtitle" %}</p>
       {% endif %}
-      <div class="rich-text">{{ page.body|safe }}</div>
+      {% trans_field page "body" as body_text %}
+      <div class="rich-text">{{ body_text|safe }}</div>
     {% else %}
       <p class="story-lead">{% trans 'For over three decades, Biochem has been cultivating the finest fruits and transforming them into premium products.' %}</p>
       <div class="rich-text">

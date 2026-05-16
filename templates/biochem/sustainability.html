@@ -13,7 +13,8 @@
 <section class="section">
   <div class="container story-content">
     {% if page %}
-      <div class="rich-text">{{ page.body|safe }}</div>
+      {% trans_field page "body" as body_text %}
+      <div class="rich-text">{{ body_text|safe }}</div>
     {% else %}
       <div class="rich-text">
         <h2>{% trans 'Our Commitment' %}</h2>
