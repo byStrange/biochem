@@ -1,7 +1,5 @@
 from django.conf import settings
 from django.utils import translation
-from django.http import HttpResponseRedirect
-from django.urls import resolve, Resolver404
 
 
 class LocaleMiddleware:
@@ -15,7 +13,10 @@ class LocaleMiddleware:
             request.LANGUAGE_CODE = lang
         else:
             request.LANGUAGE_CODE = settings.LANGUAGE_CODE
+
         response = self.get_response(request)
+        response.setdefault('Content-Language', request.LANGUAGE_CODE)
+        translation.deactivate()
         return response
 
     def _get_language_from_path(self, path):
